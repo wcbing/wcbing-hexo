@@ -33,21 +33,21 @@
       <link rel="alternate" href="/atom.xml" title="炳的知识库" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>pip的使用 - 炳的知识库</title>
-  <meta name="keywords" content="开发速查,pip,null">
-  <meta desc name="description" content=" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们  - wcbing/炳 - 炳的知识库">
+  <meta name="keywords" content="python,开发速查,null">
+  <meta desc name="description" content="pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。 - wcbing/炳 - 炳的知识库">
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="pip的使用">
 <meta property="og:url" content="https://wcbing.top/dev/pip/index.html">
 <meta property="og:site_name" content="炳的知识库">
-<meta property="og:description" content="pip是python的包管理器，有能力可以自己参考官方使用文档。  有时候你会见到python -m pip xxx，其实就相当于pip xxx  1 安装、卸载、升级 pip安装库的命令是：pip install 库名称  pip升级库的命令是：pip install --upgrade 库名称 或者pip install -U 库名称由此可知，升级是特殊的安装操作。此外，pip可以升级自身。">
+<meta property="og:description" content="pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2021-07-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-10T07:43:09.040Z">
+<meta property="article:published_time" content="2021-06-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-10T02:18:52.204Z">
 <meta property="article:author" content="wcbing&#x2F;炳">
+<meta property="article:tag" content="python">
 <meta property="article:tag" content="开发速查">
-<meta property="article:tag" content="pip">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1873,7 +1873,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1682928743993),
+    lastupdate: new Date(1683547859582),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["blogger","toc"],
@@ -2635,7 +2635,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-navmirrors">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>镜像合集</p>
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f516.svg'><p>镜像站合集</p>
             </a>
           
             <a href="/categories/VS-Code/"
@@ -2675,7 +2675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
     <meta itemprop="name" content="炳的知识库">
-    <meta itemprop="description" content=" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们 ">
+    <meta itemprop="description" content=" 其实没啥知识 😏，就分享一些奇奇怪怪的东西们 ">
   </span>
   
 
@@ -2721,10 +2721,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-07-05T00:00:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2021-06-05T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年7月5日</p>
+    <p>发布于：2021年6月5日</p>
   </a>
 </div>
 
@@ -2747,33 +2747,35 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>pip是python的包管理器，有能力可以自己参考<a target="_blank" rel="noopener" href="https://pip.pypa.io/">官方使用文档</a>。</p>
+    <p>pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考<a target="_blank" rel="noopener" href="https://pip.pypa.io/">官方使用文档</a>。</p>
+<span id="more"></span>
+
+<h2 id="1、pip换源（建议）"><a href="#1、pip换源（建议）" class="headerlink" title="1、pip换源（建议）"></a>1、pip换源（建议）</h2><p>由于国内网络原因，很多python库在线安装很慢甚至安装失败。建议自己提前换源。<br>可以将某个镜像源<strong>设置为pip默认源</strong>。这里以阿里云的为例，终端里输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>有时候你会见到<code>python -m pip xxx</code>，其实就相当于<code>pip xxx</code></p>
+<p>有时候你会见到<code>python -m pip xxx</code>，其实就相当于<code>pip xxx</code>，如果pip没有加入PATH时可以使用。</p>
 </blockquote>
-<h2 id="1-安装、卸载、升级"><a href="#1-安装、卸载、升级" class="headerlink" title="1 安装、卸载、升级"></a>1 安装、卸载、升级</h2><ul>
+<p>国内常用pip源（pypi）：</p>
+<ul>
+<li>pypi - 校园网联合镜像站：<a target="_blank" rel="noopener" href="https://mirrors.cernet.edu.cn/list/pypi">https://mirrors.cernet.edu.cn/list/pypi</a><br>集合了不少高校的源和使用帮助，任意点击一个镜像站的名字进入</li>
+<li>阿里云镜像：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>能用，但速度一般</li>
+<li>豆瓣镜像：<a target="_blank" rel="noopener" href="http://pypi.doubanio.com/simple/">http://pypi.doubanio.com/simple/</a></li>
+</ul>
+<blockquote>
+<p>更多镜像站及其使用请查看 <a href="/nav/mirrors">镜像站合集</a></p>
+</blockquote>
+<h2 id="2、安装、卸载、升级"><a href="#2、安装、卸载、升级" class="headerlink" title="2、安装、卸载、升级"></a>2、安装、卸载、升级</h2><ul>
 <li><strong>pip安装</strong>库的命令是：<code>pip install 库名称</code> </li>
 <li><strong>pip升级</strong>库的命令是：<code>pip install --upgrade 库名称</code> 或者<code>pip install -U 库名称</code><br>由此可知，升级是特殊的安装操作。此外，<strong>pip可以升级自身</strong>。 </li>
 <li><strong>pip卸载</strong>库的命令是：<code>pip uninstall 库名称</code></li>
 </ul>
-<h2 id="2-展示与查看"><a href="#2-展示与查看" class="headerlink" title="2 展示与查看"></a>2 展示与查看</h2><p>到底安装了那些库呢，又怎么查看某个库的具体信息呢？</p>
+<h2 id="3、展示与查看"><a href="#3、展示与查看" class="headerlink" title="3、展示与查看"></a>3、展示与查看</h2><p>到底安装了那些库呢，又怎么查看某个库的具体信息呢？</p>
 <ul>
 <li><code>pip list</code> 可展示<strong>所有已安装</strong>的库</li>
 <li><code>pip show 库名称</code> 可查看某库的<strong>具体信息</strong></li>
 <li><code>pip search 关键字</code> 可搜素并展示相关库</li>
 </ul>
-<h2 id="3-pip换源（建议）"><a href="#3-pip换源（建议）" class="headerlink" title="3 pip换源（建议）"></a>3 pip换源（建议）</h2><p>由于国内网络原因，很多python库在线安装很慢甚至安装失败。</p>
-<p>建议自己手动换源下载，可以将某个镜像源<strong>设置为pip默认源</strong>。这里以阿里云的为例，终端里输入：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></table></figure>
-
-<p>国内常用pip源（pypi）：</p>
-<ul>
-<li>pypi - 校园网联合镜像站：<a target="_blank" rel="noopener" href="https://mirrors.cernet.edu.cn/list/pypi">https://mirrors.cernet.edu.cn/list/pypi</a><br>集合了不少高校的源和使用帮助</li>
-<li>阿里云镜像：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>能用，但速度一般</li>
-<li>豆瓣镜像：<a target="_blank" rel="noopener" href="http://pypi.doubanio.com/simple/">http://pypi.doubanio.com/simple/</a></li>
-</ul>
-<p>更多镜像站及其使用请查看下文<br><a target="_blank" rel="noopener" href="https://www.yuque.com/cbing/mirrors/help">如何使用镜像站-下载及“换源”</a></p>
-<h2 id="4特殊安装（非必须）"><a href="#4特殊安装（非必须）" class="headerlink" title="4特殊安装（非必须）"></a>4特殊安装（非必须）</h2><p><strong>指定版本安装</strong><br><code>pip install 第三方库名称==版本号</code><br>指定版本的几种方式：<br>①不指定的情况下，默认安装最新的<br>②&#x3D;&#x3D; 指定具体版本号<br>③&lt;&#x3D; 指定最高版本号<br>④&gt;&#x3D; 指定最低版本号<br>⑤&lt; 不高于某版本号<br>⑥&gt; 不低于某版本号<br>注意，如果不指定具体的版本号，则需要用引号(‘ ‘)。<br>如：<code>pip install &#39;jieba&gt;0.42&#39;</code></p>
+<h2 id="4、特殊安装（非必须）"><a href="#4、特殊安装（非必须）" class="headerlink" title="4、特殊安装（非必须）"></a>4、特殊安装（非必须）</h2><p><strong>指定版本安装</strong><br><code>pip install 第三方库名称==版本号</code><br>指定版本的几种方式：<br>①不指定的情况下，默认安装最新的<br>②&#x3D;&#x3D; 指定具体版本号<br>③&lt;&#x3D; 指定最高版本号<br>④&gt;&#x3D; 指定最低版本号<br>⑤&lt; 不高于某版本号<br>⑥&gt; 不低于某版本号<br>注意，如果不指定具体的版本号，则需要用引号(‘ ‘)。<br>如：<code>pip install &#39;jieba&gt;0.42&#39;</code></p>
 <p><strong>离线安装</strong><br>有时候我们可能在无网络或者网速很慢的情况下安装某个库，这个时候就会想到离线安装，可以去下面这些网站提前下载所需库。</p>
 <blockquote>
 <p>某大学：<a target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">https://www.lfd.uci.edu/~gohlke&#x2F;pythonlibs&#x2F;</a><br>Pypi（Python官方）：<a target="_blank" rel="noopener" href="https://pypi.org/">https://pypi.org/</a></p>
@@ -2820,7 +2822,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-10T15:43:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-10T10:18:52+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2023年1月10日</p>
@@ -2832,8 +2834,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%BC%80%E5%8F%91%E9%80%9F%E6%9F%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>开发速查</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pip/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>pip</p></a></div>
-  <span hidden itemprop="keywords">开发速查 pip</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%BC%80%E5%8F%91%E9%80%9F%E6%9F%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>开发速查</p></a></div>
+  <span hidden itemprop="keywords">python 开发速查</span>
 
 
         
@@ -2846,7 +2848,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary=pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。"
           
           >
           
@@ -2858,7 +2860,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary=pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。"
           
           >
           
@@ -2870,7 +2872,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://wcbing.top/dev/pip/&title=pip的使用 - 炳的知识库&summary=pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。"
           
           >
           
@@ -2913,19 +2915,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/nav/mirrors/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>镜像合集</p>
-          <p class='content'>国内常用镜像站合集
+        <a class='prev' href='/vscode/start/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>「Code」目录</p>
+          <p class='content'>文字版的目录
 
 
+
+目录目录
+
+没办法，因为有些文章在知乎上，这个先跳到知乎
+
+或者知乎专栏
 </p>
         </a>
       
       
-        <a class='next' href='/vscode/lang/c-cpp/'>
-          <p class='title'>「Code」C/CPP<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>请点击知乎文章
-</p>
+        <a class='next' href='/software/Browsers/Ext-US/'>
+          <p class='title'>浏览器扩展与用户脚本<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>浏览器扩展与用户脚本的介绍和推荐
+
+
+浏览器扩展我觉得这个就不用介绍了吧。不过提一下，这叫扩展，不叫插件。浏览器插件是另外的东西。
+某些扩展翻译
+腾讯翻译：火狐 Chromuim系也有Googl...</p>
         </a>
       
     </div>
@@ -3053,7 +3065,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E3%80%81%E5%8D%B8%E8%BD%BD%E3%80%81%E5%8D%87%E7%BA%A7"><span class="toc-text">1 安装、卸载、升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B1%95%E7%A4%BA%E4%B8%8E%E6%9F%A5%E7%9C%8B"><span class="toc-text">2 展示与查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-pip%E6%8D%A2%E6%BA%90%EF%BC%88%E5%BB%BA%E8%AE%AE%EF%BC%89"><span class="toc-text">3 pip换源（建议）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E7%89%B9%E6%AE%8A%E5%AE%89%E8%A3%85%EF%BC%88%E9%9D%9E%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="toc-text">4特殊安装（非必须）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81pip%E6%8D%A2%E6%BA%90%EF%BC%88%E5%BB%BA%E8%AE%AE%EF%BC%89"><span class="toc-text">1、pip换源（建议）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E5%8D%B8%E8%BD%BD%E3%80%81%E5%8D%87%E7%BA%A7"><span class="toc-text">2、安装、卸载、升级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B1%95%E7%A4%BA%E4%B8%8E%E6%9F%A5%E7%9C%8B"><span class="toc-text">3、展示与查看</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E7%89%B9%E6%AE%8A%E5%AE%89%E8%A3%85%EF%BC%88%E9%9D%9E%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="toc-text">4、特殊安装（非必须）</span></a></li></ol>
     </div>
   </section>
 
@@ -3821,7 +3833,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"炳的知识库","url":"https://wcbing.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/","sameAs":["https://github.com/volantis-x"],"description":" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们 "},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://wcbing.top/","name":"炳的知识库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://wcbing.top/categories/开发类/","name":"开发类"}},{"@type":"ListItem","position":3,"item":{"@id":"https://wcbing.top/dev/pip/","name":"pip的使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"炳的知识库","url":"https://wcbing.top/","keywords":null,"description":" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们 ","author":{"@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/","description":" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们 "},"publisher":{"@type":"Organization","name":"炳的知识库","url":"https://wcbing.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://wcbing.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"pip的使用","description":" 文章合集「上方可切换」其实没啥知识 😏，就分享一些奇奇怪怪的东西们 ","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://wcbing.top/dev/pip/"},"author":{"@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/"},"publisher":{"@type":"Organization","name":"炳的知识库","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://wcbing.top/dev/pip/","wordCount":0,"datePublished":"2021-07-04T16:00:00.000Z","dateModified":"2023-01-10T07:43:09.040Z","articleSection":"开发类","keywords":"开发速查,pip","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"炳的知识库","url":"https://wcbing.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/","sameAs":["https://github.com/volantis-x"],"description":" 其实没啥知识 😏，就分享一些奇奇怪怪的东西们 "},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://wcbing.top/","name":"炳的知识库"}},{"@type":"ListItem","position":2,"item":{"@id":"https://wcbing.top/categories/开发类/","name":"开发类"}},{"@type":"ListItem","position":3,"item":{"@id":"https://wcbing.top/dev/pip/","name":"pip的使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"炳的知识库","url":"https://wcbing.top/","keywords":null,"description":" 其实没啥知识 😏，就分享一些奇奇怪怪的东西们 ","author":{"@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/","description":" 其实没啥知识 😏，就分享一些奇奇怪怪的东西们 "},"publisher":{"@type":"Organization","name":"炳的知识库","url":"https://wcbing.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://wcbing.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"pip的使用","description":"pip是python的包管理器，说一下pip的换源及简单使用方式。详细的有能力可以自己参考官方使用文档。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://wcbing.top/dev/pip/"},"author":{"@type":"Person","name":"wcbing/炳","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wcbing.top/"},"publisher":{"@type":"Organization","name":"炳的知识库","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://wcbing.top/dev/pip/","wordCount":52,"datePublished":"2021-06-04T16:00:00.000Z","dateModified":"2023-01-10T02:18:52.204Z","articleSection":"开发类","keywords":"python,开发速查","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
